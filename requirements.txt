@@ -1,0 +1,13 @@
+openai
+numpy
+nest-asyncio
+torch
+soundfile
+scipy
+transformers
+nemo_toolkit["asr"]
+nemo-text-processing
+librosa
+websockets
+neutts
+numpy==1.26.4
