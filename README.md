@@ -2,6 +2,13 @@
 
 MMTau is a multi-modal benchmarking framework for evaluating voice-based agentic systems on customer-service tasks. It extends [Tau$^2$-bench](https://github.com/sierra-research/tau2-bench) by introducing a full voice pipeline (ASR + LLM + TTS) that converts text-based agent interactions into realistic spoken conversations, then evaluates how well agents perform under the noise and ambiguity inherent in speech.
 
+Link to paper: https://arxiv.org/abs/2603.0964
+Link to blog: [TBA], check: https://engineering.sprinklr.com/
+
+
+## Updates 
+$\text{MM-Tau-p}^2$ has also been selected for presentation at (MSLD 2026)[https://nlp.cs.illinois.edu/msld.html]
+
 ## How It Works
 
 1. **Task retrieval** — Tasks (customer-service scenarios) are loaded from Tau$^2$-bench for a chosen domain (`retail` or `telecom`).
@@ -187,9 +194,14 @@ python run.py telecom --eval_only --run_name my_previous_run
 
 Each run creates a directory at `.temp/<run_name>/` containing:
 
+
 - `ground.txt` — ground-truth text conversation
 - `implementation_llm.txt` — what the LLM intended to say/heard
 - `implementation_actual.txt` — what was actually spoken/heard (post ASR/TTS)
 - `*_user.wav` / `*_agent.wav` — individual turn audio files
 - `pipeline.log` — full run log
 - `Evals*.pkl` — pickled evaluation report
+
+### Authors
+(Anupam Purwar)[https://anupam-purwar.github.io/page/] and Aditya Choudhary
+
